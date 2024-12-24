@@ -1,13 +1,17 @@
 
-//  importing modules
+
+// importing modules 
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
+// Creating express app
 const app = express();
-const PORT = process.env.PORT || 5000;
+// defining port number 
+const PORT = process.env.PORT || 3000;
 
+// enabling CORS for any unknown origin(https://xyz.example.com)
 app.use(cors());
 app.use(bodyParser.json());
 
@@ -66,3 +70,5 @@ app.post("/api/watchlist", async (req, res) => {
 app.listen(PORT, () => {
 	console.log(`Server is running on port ${PORT}`);
 });
+
+
